@@ -1,0 +1,84 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings">
+      <img src="/updates/MiniBnB_logo.png" alt="Logo">
+    </a>
+    <div class="search-container mx-auto">
+      <div class="search-bar d-flex align-items-center">
+        <div class="search-section">Anywhere</div>
+        <div class="search-section">Any week</div>
+        <div class="search-section last">Add guests</div>
+        <input type="text" class="search-input" placeholder="Search destinations, dates, or guests">
+        <button class="search-btn">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+    </div>
+    <div class="d-flex align-items-center">
+      <a class="nav-link me-1 new-listing" href="/listings/new">Minibnb your home</a>
+      <div class="me-1 globe-container">
+        <i class="fa-solid fa-globe globe-top"></i>
+      </div>
+      <div class="ms-auto">
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown signinbtn d-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-circle-user"></i>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <% if (!currentUser) { %>
+              <li><a class="dropdown-item" href="/signup"><b>Sign up</b></a></li>
+              <li><a class="dropdown-item" href="/login">Log in</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/listings/new">Minibnb your home</a></li>
+              <li><a class="dropdown-item" href="#">Host an experience</a></li>
+              <li><a class="dropdown-item" href="#">Help Center</a></li>
+            <% } %> <% if (currentUser) { %>
+              <li><a class="dropdown-item" href="#"><b>Messages</b></a></li>
+              <li><a class="dropdown-item" href="#"><b>Notifications</b></a></li>
+              <li><a class="dropdown-item" href="#"><b>Trips</b></a></li>
+              <li><a class="dropdown-item" href="#"><b>Wishlists</b></a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/listings/new">MiniBnB your home</a></li>
+              <li><a class="dropdown-item" href="#">Host an experience</a></li>
+              <li><a class="dropdown-item" href="#">Refer a host</a></li>
+              <li><a class="dropdown-item" href="#">Account</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Help Center</a></li>
+              <li><a class="dropdown-item" href="/logout">Logout</a></li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchBar = document.querySelector('.search-bar');
+    const searchBtn = document.querySelector('.search-btn');
+    const searchInput = document.querySelector('.search-input');
+  
+    searchBtn.addEventListener('click', () => {
+      searchBar.classList.toggle('active');
+      if (searchBar.classList.contains('active')) {
+        searchInput.focus();
+      }
+    });
+  
+    searchInput.addEventListener('blur', () => {
+      if (!searchInput.value) {
+        searchBar.classList.remove('active');
+      }
+    });
+  
+    searchInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' && searchInput.value) {
+        console.log('Search for:', searchInput.value);
+        searchBar.classList.remove('active');
+        searchInput.value = '';
+      }
+    });
+  });
+</script>

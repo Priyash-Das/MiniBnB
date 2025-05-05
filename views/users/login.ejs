@@ -1,0 +1,51 @@
+<% layout('layouts/boilerplate') -%>
+
+<div class="row mt-3">
+    <div class="text-center mb-4">
+        <h2>Login</h2>
+        <p class="text-muted">Sign in to your account</p>
+    </div>
+    <div class="col-6 offset-3 signupcontainer">
+        <form method="POST" action="/login" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" name="username" id="username" placeholder="Enter your username" required autocomplete="off" class="form-control py-2">
+            </div>
+            <div class="mb-3 position-relative">
+                <label for="password" class="form-label">Password</label>
+                <div class="input-group">
+                    <input 
+                        type="password" 
+                        name="password" 
+                        id="password" 
+                        class="form-control py-2 pe-5"
+                        placeholder="Enter your password" 
+                        required
+                        autocomplete="off"
+                    >
+                    <div class="position-absolute" style="right: 10px; top: 50%; transform: translateY(-50%); z-index: 10;">
+                        <i class="bi bi-eye toggle-password" id="togglePassword"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-success py-2">Login</button>
+            </div>
+        </form>
+        <div class="text-center mt-2">
+            <small>Don't have an account? <a href="/signup">Sign up</a></small>
+        </div>
+    </div>
+</div>
+
+<script>
+    const toggleBtn = document.getElementById("togglePassword");
+    const passwordField = document.getElementById("password");
+
+    toggleBtn.addEventListener("click", function () {
+        const isPassword = passwordField.type === "password";
+        passwordField.type = isPassword ? "text" : "password";
+        this.classList.toggle("bi-eye");
+        this.classList.toggle("bi-eye-slash");
+    });
+</script>

@@ -1,0 +1,56 @@
+<% layout('layouts/boilerplate') -%>
+
+<div class="row mt-3">
+    <div class="col-8 offset-2">
+        <h3>Create a New Listing</h3><br>
+        <form method="POST" action="/listings" class="needs-validation" novalidate enctype="multipart/form-data">
+
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" name="listing[title]" placeholder="Title" required autocomplete="off" class="form-control">
+                <div class="valid-feedback">✓ Perfect</div>
+                <div class="invalid-feedback">Please provide a descriptive title for your property.</div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea name="listing[description]" placeholder="Add Property description" required autocomplete="off" class="form-control"></textarea>
+                <div class="valid-feedback">✓ Got it!</div>
+                <div class="invalid-feedback">Please add a short description.</div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="image" class="form-label">Upload Image</label>
+                <input type="file" name="listing[image]" required class="form-control">
+                <div class="valid-feedback">✓ Image selected</div>
+                <div class="invalid-feedback">Please upload an image of your property.</div>
+                <small class="form-text text-muted">Upload a high-quality photo of your property.</small>
+            </div>
+
+            <div class="row">
+                <div class="mb-3 col-md-4">
+                    <label for="price" class="form-label">Price</label>
+                    <input type="number" name="listing[price]" placeholder="Price per night (INR)" required autocomplete="off" class="form-control">
+                    <div class="valid-feedback">✓ Good</div>
+                    <div class="invalid-feedback">Please enter a valid price.</div>
+                </div>
+
+                <div class="mb-3 col-md-8">
+                    <label for="country" class="form-label">Country</label>
+                    <input type="text" name="listing[country]" placeholder="Country" required autocomplete="off" class="form-control">
+                    <div class="valid-feedback">✓ Set</div>
+                    <div class="invalid-feedback">Please provide a valid country name.</div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" name="listing[location]" placeholder="City or area" required autocomplete="off"  class="form-control">
+                <div class="valid-feedback">✓ Set</div>
+                <div class="invalid-feedback">Please specify the city or neighborhood where your property is located.</div>
+            </div>
+            
+            <button type="submit" class="btn btn-dark add-edit-btn mt-4">Add</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+<% layout('layouts/boilerplate') -%>
+
+<div class="row mt-3">
+    <div class="text-center mb-4">
+        <h2>Sign Up</h2>
+        <p class="text-muted">Create your account to get started</p>
+    </div>
+    <div class="col-6 offset-3 signupcontainer">
+        <form method="POST" action="/signup" class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" name="username" id="username" placeholder="Enter your username" required autocomplete="off" class="form-control py-2">
+                <div class="valid-feedback">✓ Looks good!</div>
+                <div class="invalid-feedback">Please provide a valid username.</div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" name="email" id="email" placeholder="Enter email" required autocomplete="off" class="form-control py-2">
+                <div class="valid-feedback">✓ Valid email</div>
+                <div class="invalid-feedback">Please provide a valid email address.</div>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <div class="password-container">
+                    <input 
+                        type="password" 
+                        name="password" 
+                        id="password" 
+                        class="form-control py-2 pe-5" 
+                        placeholder="At least 8 characters (Include A-Z, a-z, 0-9)" 
+                        required 
+                        minlength="8"
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$"
+                        autocomplete="new-password"
+                        style="padding-right: 160px;"
+                    >
+                    <div class="valid-feedback">✓ Strong password!</div>
+                    <div class="invalid-feedback">
+                        Password must have:
+                        <ul class="list-unstyled mt-1 mb-0" id="passwordRequirements">
+                            <li><small><span id="lengthCheckWrapper"><span id="lengthCheck">✗</span> Minimum of 8 characters</span></small></li>
+                            <li><small><span id="upperCheckWrapper"><span id="upperCheck">✗</span> At least one uppercase letter (A-Z)</span></small></li>
+                            <li><small><span id="lowerCheckWrapper"><span id="lowerCheck">✗</span> At least one lowercase letter (a-z)</span></small></li>
+                            <li><small><span id="numberCheckWrapper"><span id="numberCheck">✗</span> At least one numeric digit (0-9)</span></small></li>
+                          </ul>
+                    </div>
+                    <div class="input-group-append">
+                        <button type="button" class="password-toggle-btn" id="togglePassword">
+                            <i class="bi bi-eye"></i>
+                        </button>
+                        <button type="button" class="generate-btn" id="generatePassword">
+                            Generate
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-success py-2">Create Account</button>
+            </div>
+        </form>
+        <div class="text-center mt-2">
+            <small>Already have an account? <a href="/login">Sign in</a></small>
+        </div>
+    </div>
+</div>

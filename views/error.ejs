@@ -1,0 +1,20 @@
+<% layout('layouts/boilerplate') -%>
+
+<div class="error-container animate__animated animate__fadeIn">
+  <svg class="error-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="#ff4757"/>
+  </svg>
+  
+  <div class="error-code"><%= statusCode %></div>
+  <h1 class="error-message"><%= message %></h1>
+  
+  <% if (typeof timestamp !== 'undefined') { -%>
+    <p class="error-details">
+      <i class="fas fa-clock"></i> <%= timestamp %>
+    </p>
+  <% } -%>
+
+  <a href="/listings" class="home-btn">
+    <i class="fas fa-home"></i> Back to Listings
+  </a>
+</div>
