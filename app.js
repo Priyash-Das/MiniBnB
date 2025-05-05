@@ -21,7 +21,6 @@ const listingsRouter = require("./routes/listing.js");
 const reviewsRouter = require("./routes/review.js");
 const userRouter = require("./routes/user.js");
 
-// const MongoURL = "mongodb://127.0.0.1:27017/minibnb";
 const dbUrl = process.env.ATLASDB_URL;
 
 main()
