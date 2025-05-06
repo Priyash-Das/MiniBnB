@@ -6,7 +6,7 @@
 ---
 ---
 
-![MiniBnB Banner](https://github.com/Priyash-Das/Photos/blob/main/MiniBnB%20Photo/top.png)
+![MiniBnB Banner](https://github.com/Priyash-Das/Photos/blob/main/MiniBnB%20Photo/main.png)
 
 ---
 ---
