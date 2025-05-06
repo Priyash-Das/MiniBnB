@@ -24,6 +24,13 @@ The project is designed to be scalable, with clean code architecture and reusabl
 ---
 ---
 
+## 📽️ Demo Video 
+
+👉 [Click here](https://drive.google.com/drive/folders/1KL2R9goFYcz9oY0I6iwhuhCdv1MPXCh8?usp=sharing)
+
+---
+---
+
 ## 📸 Screenshots
 
 <table>
