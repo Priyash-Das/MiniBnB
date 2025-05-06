@@ -259,7 +259,7 @@ json
 CLOUDINARY_CLOUD_NAME=your_name
 CLOUDINARY_KEY=your_key
 CLOUDINARY_SECRET=your_secret
-DB_URL=mongodb+srv://...
+ATLASDB_URL=mongodb+srv://...
 SECRET=sessionSecret
 ```
 
