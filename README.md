@@ -1,7 +1,7 @@
 # 🏡 MiniBnB - Your Home Away From Home 🌟<br> <br>
 
 **MiniBnB** is a full-stack web application that replicates core functionalities of Airbnb, enabling users to browse and list places to stay across the world. Developed using **Node.js**, **Express**, **MongoDB**, and **EJS**, this project showcases `Authentication`, `Error handling`, and `Dynamic routing` in an `MVC Structure`. 🏖️
-> Visit the Website: [ Live Demo ](https://minibnb.onrender.com) // [minibnb.onrender.com](https://minibnb.onrender.com/listings) – Explore the deployed MiniBnB project.
+> Visit the Website: [ Live Demo ](https://minibnb.onrender.com/listings) // [minibnb.onrender.com](https://minibnb.onrender.com/listings)
 
 ---
 ---
