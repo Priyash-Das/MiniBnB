@@ -18,7 +18,7 @@ MiniBnB replicates core Airbnb features while adding its own flair. It allows us
 - Create, edit, and delete property listings with images stored on Cloudinary.
 - Leave reviews and ratings for listings with an interactive star system.
 - View listing locations on an interactive map using Leaflet.js.
-- Enjoy a responsive, user-friendly interface powered by Bootstrap and custom CSS.
+- Enjoy this user-friendly interface powered by Bootstrap and custom CSS.
 
 The project is designed to be scalable, with clean code architecture and reusable components, making it a great foundation for further enhancements.
 
